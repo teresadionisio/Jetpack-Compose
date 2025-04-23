@@ -14,9 +14,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 
-@Preview (showBackground = true)
+
 @Composable
-fun MyColumn(modifier: Modifier = Modifier){
+fun MyColumn(modifier: Modifier){
  Column(modifier = modifier.fillMaxSize().verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.Center,
          horizontalAlignment = Alignment.CenterHorizontally){

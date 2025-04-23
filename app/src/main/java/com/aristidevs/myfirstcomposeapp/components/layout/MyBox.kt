@@ -14,9 +14,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-@Preview
+
 @Composable
-fun MyBox(){
+fun MyBox(modifier: Modifier){
     Box(modifier= Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
         Box(modifier = Modifier.size(50.dp).background(Color.Red).verticalScroll(
             rememberScrollState()), contentAlignment = Alignment.Center){
