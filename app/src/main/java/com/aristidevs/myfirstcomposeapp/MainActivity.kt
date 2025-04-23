@@ -14,6 +14,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.aristidevs.myfirstcomposeapp.components.layout.MyBox
+import com.aristidevs.myfirstcomposeapp.components.layout.MyColumn
 import com.aristidevs.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,10 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                   MyColumn()
                 }
             }
         }
