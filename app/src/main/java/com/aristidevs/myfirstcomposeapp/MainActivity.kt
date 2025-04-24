@@ -8,9 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.aristidevs.myfirstcomposeapp.components.layout.InitialScreen
 import com.aristidevs.myfirstcomposeapp.components.layout.MyBox
 import com.aristidevs.myfirstcomposeapp.components.layout.MyColumn
+import com.aristidevs.myfirstcomposeapp.components.layout.MyComplexLayout
 import com.aristidevs.myfirstcomposeapp.components.layout.MyRow
+import com.aristidevs.myfirstcomposeapp.components.layout.TextButtonExample
 import com.aristidevs.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 import kotlinx.coroutines.delay
 
@@ -22,12 +25,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyBox(Modifier.padding(innerPadding))
-
-                    MyColumn(Modifier.padding(innerPadding))
-
-                    MyRow(Modifier.padding(innerPadding))
-                }
+                    MyComplexLayout(Modifier.padding(innerPadding))
+               }
             }
         }
     }
