@@ -8,7 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.aristidevs.myfirstcomposeapp.components.layout.ConstrainBarrier
+import com.aristidevs.myfirstcomposeapp.components.layout.ConstrainExampleGuide
+import com.aristidevs.myfirstcomposeapp.components.layout.ConstraintChain
 import com.aristidevs.myfirstcomposeapp.components.layout.InitialScreen
+import com.aristidevs.myfirstcomposeapp.components.layout.MyBasicConstrainLayout
+import com.aristidevs.myfirstcomposeapp.components.layout.MyBasicConstraintLayout
 import com.aristidevs.myfirstcomposeapp.components.layout.MyBox
 import com.aristidevs.myfirstcomposeapp.components.layout.MyColumn
 import com.aristidevs.myfirstcomposeapp.components.layout.MyComplexLayout
@@ -25,7 +30,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyComplexLayout(Modifier.padding(innerPadding))
+                    ConstraintChain(Modifier.padding(innerPadding))
                }
             }
         }
