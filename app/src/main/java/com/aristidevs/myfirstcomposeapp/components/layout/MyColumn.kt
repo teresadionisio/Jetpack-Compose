@@ -11,26 +11,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
-
-
+import androidx.constraintlayout.compose.HorizontalAlign
+/*****************************************************************/
 @Composable
-fun MyColumn(modifier: Modifier){
- Column(modifier = modifier.fillMaxSize().verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.Center,
-         horizontalAlignment = Alignment.CenterHorizontally){
-
-    var contador = 0
-
-    while (contador <100) {
-        Text(text = (contador+1).toString(), fontSize = 24.sp, modifier = Modifier.background(Color.Green))
-        Text(text = (contador+2).toString(), fontSize = 24.sp, modifier = Modifier.background(Color.Cyan))
-        Text(text = (contador+3).toString(), fontSize = 24.sp, modifier = Modifier.background(Color.Red))
-        Text(text = (contador+4).toString(), fontSize = 24.sp, modifier = Modifier.background(Color.Yellow))
-
-       contador+=4
-    //Text("Hola 1", fontSize = 24.sp, modifier = Modifier.background(Color.Red))
-     }
-    }
+fun MyColumn(modifier: Modifier = Modifier) {
+ var number:Int=0
+ Column(modifier.fillMaxSize()
+       .verticalScroll(rememberScrollState())
+       ,verticalArrangement = Arrangement.Center
+       ,horizontalAlignment = Alignment.CenterHorizontally)
+  {
+      while (number < 100) {
+          number++
+          Text("$number", modifier=Modifier.background(Color.Cyan))
+          number++
+          Text("$number", modifier=Modifier.background(Color.Blue))
+          number++
+          Text("$number", modifier=Modifier.background(Color.LightGray))
+          number++
+          Text("$number", modifier=Modifier.background(Color.Magenta))
+      }
+  }
 }
+/*****************************************************************/

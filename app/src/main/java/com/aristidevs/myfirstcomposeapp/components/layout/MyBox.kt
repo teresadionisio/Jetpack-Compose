@@ -11,16 +11,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-
-
+/********************************************************************/
 @Composable
 fun MyBox(modifier: Modifier){
-    Box(modifier= Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-        Box(modifier = Modifier.size(50.dp).background(Color.Red).verticalScroll(
-            rememberScrollState()), contentAlignment = Alignment.Center){
-              Text("Probando el Scroll vertical")
+    Box(modifier.fillMaxSize(),contentAlignment= Alignment.Center){
+        Box(modifier.size(200.dp)
+            .background(Color.Cyan)
+            .verticalScroll(rememberScrollState())
+            ,contentAlignment = Alignment.Center){
+           Text("Hola")
         }
     }
 }
+/********************************************************************/
